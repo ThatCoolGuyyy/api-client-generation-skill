@@ -1,33 +1,41 @@
-# Complete the shared API-client Skill
+# Complete and verify the starter Skill
 
-Install the same starter Skill:
+The Skill is already in this repository. Do not install it globally and do not
+copy it into the baseline repository.
 
-```bash
-npx skills add ThatCoolGuyyy/api-client-generation-skill --skill api-client-generation
-```
+## 1. Complete the Skill
 
-Choose the coding agent you will use in the workshop. The CLI prints the installed location of `api-client-generation/SKILL.md`; open that file before the exercise.
+Open `skills/api-client-generation/SKILL.md`.
 
-The retry section is the worked example completed with the instructor. Complete the three remaining TODO sections for the same Notes API.
+Retries are complete as the worked example. Replace the TODO comments under:
 
-## Twelve-minute build
+- Authentication
+- Error handling
+- Pagination
 
-1. **Authentication:** define the credential source, refresh limit, replay behaviour, second-`401` outcome, and secret-handling rule.
-2. **Error handling:** define when bodies are parsed, which fields a typed error preserves, and what fails without retry.
-3. **Pagination:** define the iteration interface, cursor propagation, termination condition, and repeated-cursor protection.
-4. Run the exact prompt in `demo/PROMPT.txt` once without the Skill and once with your completed Skill available.
-5. Keep both outputs open. Use `demo/COMPARISON_CHECKLIST.md` to mark evidence in the generated code and tests.
+Write observable rules. Prefer “replay once, then throw a typed authentication
+error” over “handle authentication properly.”
 
-Write rules that can be verified. Replace words such as “properly,” “safely,” or “handle errors” with a limit, condition, field, or expected behaviour.
+## 2. Generate the client
 
-## Room comparison
+In your coding agent, say:
 
-Compare two completions of the same starter:
+> Read and follow `skills/api-client-generation/SKILL.md`. Then complete the
+> task in `PROMPT.txt` using `openapi.yaml`.
 
-- Which generated output follows the team's standards?
-- Which team decision was missing?
-- Which rule was too vague for the agent to apply?
-- What should be merged into the canonical Skill?
+Keep the generated client and tests in this attendee workspace.
 
-The completed instructor reference is revealed after the comparison in `workshop/REFERENCE_SKILL.md`.
+## 3. Verify your own output
 
+Open `VERIFICATION_CHECKLIST.md`. For each rule, find evidence in the generated
+code or tests and mark it `PASS`, `PARTIAL`, or `MISSING`.
+
+The question is not “is this generally good code?” It is “does this output
+conform to the exact standard I wrote?”
+
+## 4. Improve one rule
+
+Choose one partial or missing behaviour. If your rule was vague, make it
+specific and testable, regenerate that part, and verify it again. If the rule
+was already explicit, record the failure as agent non-conformance rather than
+silently changing the standard.

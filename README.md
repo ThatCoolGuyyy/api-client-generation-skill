@@ -1,24 +1,23 @@
 # API Client Generation Skill
 
-Workshop repository for **Stop Re-Prompting: How Reusable AI Skills Make Vibe Coding Actually Work**.
+Attendee workspace for the APIConf Lagos 2026 workshop:
+**Stop Re-Prompting: How Reusable AI Skills Make Vibe Coding Actually Work**.
 
-The installable Skill starts with retry conventions completed. During the workshop, attendees complete authentication, error-handling, and pagination rules, then compare the generated clients.
+The repository already contains the starter Skill. There is no installation
+step. Attendees edit the three unfinished sections in
+`skills/api-client-generation/SKILL.md`, ask their coding agent to read that
+file, run the shared task, and verify the generated client against the rules
+they wrote.
 
-## Install the Skill
+## Workshop flow
 
-From the project where you want to use it:
+1. Open `skills/api-client-generation/SKILL.md`.
+2. Complete authentication, error-handling, and pagination rules.
+3. Ask the agent to read that Skill, then give it the task in `PROMPT.txt`.
+4. Use `VERIFICATION_CHECKLIST.md` to find evidence for each rule in the output.
+5. Improve one weak rule and re-run the relevant part.
 
-```bash
-npx skills add ThatCoolGuyyy/api-client-generation-skill --skill api-client-generation
-```
-
-The CLI detects supported coding agents and asks where to install the Skill. The default installation is project-scoped; add `--global` to use it across projects.
-
-## Workshop files
-
-- `skills/api-client-generation/SKILL.md` — installable starter
-- `demo/openapi.yaml` — shared Notes API contract
-- `demo/PROMPT.txt` — shared generation prompt
-- `demo/COMPARISON_CHECKLIST.md` — observable comparison criteria
-- `workshop/REFERENCE_SKILL.md` — completed instructor reference, revealed after the exercise
-
+The no-Skill run lives in a separate repository:
+[api-client-baseline](https://github.com/ThatCoolGuyyy/api-client-baseline).
+Keep the two repositories in separate agent workspaces so the baseline agent
+cannot discover this Skill.
