@@ -63,4 +63,3 @@ Add focused tests for:
 - absence of secrets in logs and thrown messages
 
 Run the narrowest relevant tests and type checks. Report which standards appear in the generated code, which are missing, and any API-contract gaps that still require confirmation.
-
