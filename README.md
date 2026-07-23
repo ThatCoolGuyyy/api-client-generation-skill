@@ -16,8 +16,3 @@ they wrote.
 3. Ask the agent to read that Skill, then give it the task in `PROMPT.txt`.
 4. Use `VERIFICATION_CHECKLIST.md` to find evidence for each rule in the output.
 5. Improve one weak rule and re-run the relevant part.
-
-The no-Skill run lives in a separate repository:
-[api-client-baseline](https://github.com/ThatCoolGuyyy/api-client-baseline).
-Keep the two repositories in separate agent workspaces so the baseline agent
-cannot discover this Skill.
