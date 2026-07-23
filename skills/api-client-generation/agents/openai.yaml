@@ -1,0 +1,5 @@
+interface:
+  display_name: "API Client Generation"
+  short_description: "Apply consistent API integration standards"
+  default_prompt: "Use $api-client-generation to generate the Notes API client from the provided OpenAPI contract."
+

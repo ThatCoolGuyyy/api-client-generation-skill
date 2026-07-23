@@ -1,0 +1,4 @@
+Generate a production-ready TypeScript client for the Notes API in openapi.yaml.
+
+Use the project's installed HTTP library. Include types and focused tests. Do not add dependencies. Do not invent API fields or team conventions that are not present in the available context.
+
